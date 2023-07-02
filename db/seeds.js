@@ -1,7 +1,7 @@
 const mongoose = require('mongoose');
-const Note = require('./app/models/noteModel');
-const Chord = require('./app/models/chordModel');
-const Key = require('./app/models/keyModel');
+const Note = require('../app/models/noteModel');
+const Chord = require('../app/models/chordModel');
+const Key = require('../app/models/keyModel');
 
 // Connect to MongoDB
 mongoose.connect('mongodb://127.0.0.1:27017/musictheorydb', { useNewUrlParser: true, useUnifiedTopology: true })

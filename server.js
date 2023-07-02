@@ -26,12 +26,19 @@ app.engine(
     defaultLayout: 'main',
     layoutsDir: path.join(__dirname, 'views', 'layouts'),
     partialsDir: path.join(__dirname, 'views', 'partials'),
+    helpers: {
+      extend: function (context, options) {
+        for (var prop in options.hash) {
+          context[prop] = options.hash[prop];
+        }
+      },
+    },
   })
 );
 app.set('view engine', 'hbs');
 
 // Routes
-const routes = require('./routes');
+const routes = require('./app/routes');
 app.use('/', routes);
 
 // Error handling middleware
