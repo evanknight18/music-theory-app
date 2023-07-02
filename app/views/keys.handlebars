@@ -1,0 +1,12 @@
+{{#extend "layouts/main"}}
+{{#block "pageTitle"}}Keys{{/block}}
+
+{{#block "body"}}
+<h2>Keys</h2>
+<ul>
+  {{#each keys}}
+    <li>{{this.name}}</li>
+  {{/each}}
+</ul>
+{{/block}}
+{{/extend}}
